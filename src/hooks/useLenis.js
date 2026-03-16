@@ -7,8 +7,8 @@ export default function useLenis() {
 
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.08,
-      duration: 1.4,
+      lerp: 0.1,
+      duration: 1.1,
       smoothWheel: true,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
     })

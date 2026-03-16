@@ -1,40 +1,59 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 
-const blobs = [
-  // Large deep-purple — top left
-  { id: 1, w: 700, h: 500, color: 'rgba(76,29,149,0.5)',   top: '-10%', left: '-15%', blur: 140, duration: 40, delay: 0,  y: [0, 20, 0],  x: [0, 12, 0] },
-  // Violet — right side
-  { id: 2, w: 550, h: 550, color: 'rgba(124,58,237,0.38)', top: '25%',  left: '65%',  blur: 120, duration: 50, delay: 8,  y: [0, -22, 0], x: [0, -14, 0] },
-  // Gold hint — center bottom
-  { id: 3, w: 400, h: 300, color: 'rgba(180,120,40,0.2)',  top: '70%',  left: '35%',  blur: 110, duration: 45, delay: 15, y: [0, 16, 0],  x: [0, 10, 0] },
-  // Indigo — bottom left
-  { id: 4, w: 480, h: 480, color: 'rgba(79,70,229,0.28)',  top: '60%',  left: '-8%',  blur: 130, duration: 55, delay: 5,  y: [0, -18, 0], x: [0, 14, 0] },
-  // Soft purple — top right
-  { id: 5, w: 320, h: 320, color: 'rgba(168,85,247,0.25)', top: '5%',   left: '75%',  blur: 100, duration: 38, delay: 20, y: [0, 14, 0],  x: [0, -10, 0] },
-  // Deep violet — far right, mid
-  { id: 6, w: 600, h: 400, color: 'rgba(109,40,217,0.25)', top: '40%',  left: '80%',  blur: 150, duration: 60, delay: 12, y: [0, 20, 0],  x: [0, -16, 0] },
-]
-
+// Pure CSS ambient blobs — no JS animation overhead at all.
+// Drifting is handled entirely by @keyframes in a <style> tag so
+// the React/Framer Motion runtime is never touched after mount.
 export default function AmbientLight() {
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-      {blobs.map((b) => (
-        <motion.div
-          key={b.id}
-          className="absolute rounded-full"
-          style={{
-            width: b.w,
-            height: b.h,
-            background: `radial-gradient(ellipse at center, ${b.color}, transparent 70%)`,
-            filter: `blur(${b.blur}px)`,
-            top: b.top,
-            left: b.left,
-          }}
-          animate={{ y: b.y, x: b.x }}
-          transition={{ duration: b.duration, delay: b.delay, repeat: Infinity, ease: 'easeInOut' }}
-        />
-      ))}
-    </div>
+    <>
+      <style>{`
+        @keyframes drift1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(12px,20px)} }
+        @keyframes drift2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-14px,-22px)} }
+        @keyframes drift3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(10px,16px)} }
+        @keyframes drift4 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(14px,-18px)} }
+        @keyframes drift5 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-10px,14px)} }
+        @keyframes drift6 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-16px,20px)} }
+        .amb { position:absolute; border-radius:50%; pointer-events:none; will-change:transform; }
+      `}</style>
+
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* Large deep-purple — top left */}
+        <div className="amb" style={{
+          width:700, height:500, top:'-10%', left:'-15%',
+          background:'radial-gradient(ellipse at center, rgba(76,29,149,0.5), transparent 70%)',
+          filter:'blur(140px)', animation:'drift1 40s ease-in-out infinite',
+        }} />
+        {/* Violet — right */}
+        <div className="amb" style={{
+          width:550, height:550, top:'25%', left:'65%',
+          background:'radial-gradient(ellipse at center, rgba(124,58,237,0.38), transparent 70%)',
+          filter:'blur(120px)', animation:'drift2 50s ease-in-out infinite 8s',
+        }} />
+        {/* Gold hint — centre bottom */}
+        <div className="amb" style={{
+          width:400, height:300, top:'70%', left:'35%',
+          background:'radial-gradient(ellipse at center, rgba(180,120,40,0.2), transparent 70%)',
+          filter:'blur(110px)', animation:'drift3 45s ease-in-out infinite 15s',
+        }} />
+        {/* Indigo — bottom left */}
+        <div className="amb" style={{
+          width:480, height:480, top:'60%', left:'-8%',
+          background:'radial-gradient(ellipse at center, rgba(79,70,229,0.28), transparent 70%)',
+          filter:'blur(130px)', animation:'drift4 55s ease-in-out infinite 5s',
+        }} />
+        {/* Soft purple — top right */}
+        <div className="amb" style={{
+          width:320, height:320, top:'5%', left:'75%',
+          background:'radial-gradient(ellipse at center, rgba(168,85,247,0.25), transparent 70%)',
+          filter:'blur(100px)', animation:'drift5 38s ease-in-out infinite 20s',
+        }} />
+        {/* Deep violet — far right mid */}
+        <div className="amb" style={{
+          width:600, height:400, top:'40%', left:'80%',
+          background:'radial-gradient(ellipse at center, rgba(109,40,217,0.25), transparent 70%)',
+          filter:'blur(150px)', animation:'drift6 60s ease-in-out infinite 12s',
+        }} />
+      </div>
+    </>
   )
 }
