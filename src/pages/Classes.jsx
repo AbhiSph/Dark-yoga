@@ -25,10 +25,9 @@ export default function Classes() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/20 via-[#050505] to-[#050505]" />
 
         {/* Animated circles */}
-        <motion.div
+        <div
           className="absolute top-20 right-10 w-96 h-96 bg-[#7c3aed]/10 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 8, repeat: Infinity }}
+          style={{ opacity: 0.4 }}
         />
 
         <div className="relative z-10 text-center">

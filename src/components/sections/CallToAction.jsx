@@ -50,15 +50,13 @@ export default function CallToAction() {
         style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.8), transparent)' }} />
 
       {/* Pulsing rings */}
-      <motion.div
+      <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-purple-500/10 pointer-events-none"
-        animate={{ scale: [1, 1.08, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ opacity: 0.4 }}
       />
-      <motion.div
+      <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full border border-purple-500/8 pointer-events-none"
-        animate={{ scale: [1, 0.93, 1], opacity: [0.2, 0.4, 0.2] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+        style={{ opacity: 0.3 }}
       />
 
       {/* Content */}

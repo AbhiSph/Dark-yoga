@@ -84,17 +84,15 @@ export default function Hero() {
       <style>{`
         @keyframes floatParticle {
           0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
-          33%  { transform: translateY(-80px) translateX(20px); opacity: 0.7; }
-          66%  { transform: translateY(-40px) translateX(-20px); opacity: 0.4; }
+          33%  { transform: translateY(-80px) translateX(20px); opacity: 0.3; }
+          66%  { transform: translateY(-40px) translateX(-20px); opacity: 0.25; }
         }
       `}</style>
 
-      {/* Animated centre glow pulse */}
-      <motion.div
+      {/* Static centre glow — no pulse */}
+      <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-3xl pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.12), transparent)' }}
-        animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.08, 1] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.1), transparent)', opacity: 0.6 }}
       />
 
       {/* ── Main content ── */}

@@ -195,11 +195,9 @@ export default function FeaturedInstructor() {
               </div>
 
               {/* Animated purple glow */}
-              <motion.div
+              <div
                 className="absolute inset-0 pointer-events-none"
-                style={{ background: 'radial-gradient(circle at 40% 30%, rgba(124,58,237,0.25), transparent 60%)' }}
-                animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                style={{ background: 'radial-gradient(circle at 40% 30%, rgba(124,58,237,0.25), transparent 60%)', opacity: 0.7 }}
               />
             </motion.div>
           </div>

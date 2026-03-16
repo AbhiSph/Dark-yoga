@@ -123,9 +123,8 @@ export default function About() {
                 <p className="font-sans text-xs text-white/15 tracking-widest mt-4">"Darkness is your teacher."</p>
               </div>
             </div>
-            <motion.div className="absolute inset-0 pointer-events-none"
-              style={{ background: 'radial-gradient(circle at 30% 30%, rgba(124,58,237,0.2), transparent 60%)' }}
-              animate={{ opacity: [0.4, 0.9, 0.4] }} transition={{ duration: 5, repeat: Infinity }} />
+            <div className="absolute inset-0 pointer-events-none"
+              style={{ background: 'radial-gradient(circle at 30% 30%, rgba(124,58,237,0.2), transparent 60%)', opacity: 0.6 }} />
           </motion.div>
         </div>
       </section>

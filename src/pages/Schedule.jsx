@@ -43,10 +43,9 @@ export default function Schedule() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/20 via-[#050505] to-[#050505]" />
 
         {/* Animated orbs */}
-        <motion.div
+        <div
           className="absolute bottom-10 left-20 w-80 h-80 bg-[#7c3aed]/15 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
-          transition={{ duration: 8, repeat: Infinity }}
+          style={{ opacity: 0.3 }}
         />
 
         <div className="relative z-10 text-center">
