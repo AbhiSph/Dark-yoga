@@ -1,0 +1,282 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// DARK YOGA® — Real content from darkyoga.at
+// Founder: Suyin Orlowski | Location: Waldviertel, Austria
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const CLASSES = [
+  {
+    id: 1,
+    name: 'Dark Yoga Retreat',
+    description:
+      'The signature experience. A multi-day journey practiced entirely in complete darkness. In the absence of light, your other senses awaken — breath deepens, awareness expands, and the soul finds its true voice. Vegan meals are provided daily. Suyin accompanies you throughout, though your greatest teacher is the silence itself.',
+    duration: 'Multi-day',
+    level: 'All Levels',
+    icon: 'retreat',
+    gradient: 'from-purple-950 to-black',
+    tag: 'Signature',
+  },
+  {
+    id: 2,
+    name: 'Silent Dark Meditation',
+    description:
+      'A guided meditation session held in complete darkness within the Tempelraum. Participants are guided inward by Suyin\'s calm presence and voice. The pyramid-charged energy field of the room creates optimal conditions for deep stillness and heightened spiritual sensitivity.',
+    duration: 90,
+    level: 'All Levels',
+    icon: 'meditation',
+    gradient: 'from-indigo-950 to-black',
+    tag: 'Guided',
+  },
+  {
+    id: 3,
+    name: 'Hanuman Chalisa Ceremony',
+    description:
+      'A devotional practice centered on the chanting of the sacred 40-stanza Hanuman Chalisa. This ancient hymn carries the highest spiritual energy, purifies the mind, and heals the soul. Practiced in near-darkness to deepen the vibrational experience. No prior chanting experience required.',
+    duration: 60,
+    level: 'All Levels',
+    icon: 'chanting',
+    gradient: 'from-orange-950 to-purple-950',
+    tag: 'Devotional',
+  },
+  {
+    id: 4,
+    name: 'Soul Training Session',
+    description:
+      'Drawing on Suyin\'s 20+ years of experience in soul training and spiritual counselling, this one-to-one session combines yoga, breathwork, hypnosis elements, and mental training. A deeply personal journey toward inner clarity, healing, and self-understanding.',
+    duration: 75,
+    level: 'All Levels',
+    icon: 'soul',
+    gradient: 'from-violet-950 to-black',
+    tag: 'Private',
+  },
+  {
+    id: 5,
+    name: 'Dark Yin & Breathwork',
+    description:
+      'Long, passive holds practiced in complete silence and darkness. Paired with conscious breathwork, this practice releases deep-seated tension in the connective tissue, calms the nervous system, and opens energetic channels. The darkness removes all distraction — only breath and body remain.',
+    duration: 90,
+    level: 'All Levels',
+    icon: 'yin',
+    gradient: 'from-slate-900 to-black',
+    tag: 'Restorative',
+  },
+  {
+    id: 6,
+    name: 'Darkness Inner Retreat',
+    description:
+      'The most transformative offering — a 10-day silent stay in the Darkroom of the Tempelraum in the mystical Waldviertel. Fasting with one vegan meal per day. Daily optional conversations with Suyin. For those ready to meet themselves fully — without distraction, without light, without noise.',
+    duration: '10 days',
+    level: 'Intermediate',
+    icon: 'darkroom',
+    gradient: 'from-gray-950 to-black',
+    tag: 'Intensive',
+  },
+]
+
+export const INSTRUCTORS = [
+  {
+    id: 1,
+    name: 'Suyin Orlowski',
+    role: 'Founder & Soul Guide',
+    bio: 'Born in July 1960, Suyin Orlowski is an artist, mental trainer, and soul guide with over 20 years of experience in soul training and spiritual counselling. She completed her training in hypnosis and mental coaching in Vienna and has trained as a fire-walk trainer and medium under Dr. Julia Assante. Suyin founded Dark Yoga® in the mystical Waldviertel of Austria, creating a sacred space where darkness becomes a teacher. Her philosophy: the true teacher is the silence and darkness within oneself.',
+    specialties: ['Dark Yoga Retreat', 'Soul Training', 'Meditation', 'Mental Coaching', 'Fire-Walk Training'],
+    quote: '"I do not guide you toward the light. I guide you to understand your darkness — for that is where all light is born."',
+    image: null,
+  },
+  {
+    id: 2,
+    name: 'Saskia John',
+    role: 'Author & Retreat Co-Guide',
+    bio: 'Author and retreat companion Saskia John co-presents the celebrated lecture series "Durch die Dunkelheit ins Licht" (Through Darkness into Light) alongside Suyin. Her written accounts of experiencing complete darkness have moved audiences across Austria and Germany. She brings a literary and contemplative presence to Dark Yoga events.',
+    specialties: ['Darkness Retreat', 'Contemplative Writing', 'Storytelling'],
+    quote: '"In darkness, I finally stopped performing life and simply lived it."',
+    image: null,
+  },
+]
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    quote:
+      'I spent three days in complete darkness at the Tempelraum. By the second day I had no fear left — only stillness. Suyin\'s guidance is gentle, grounded, and profoundly wise.',
+    author: 'Maria K.',
+    location: 'Vienna, Austria',
+    rating: 5,
+  },
+  {
+    id: 2,
+    quote:
+      'Suyin\'s soul training sessions are unlike anything I have experienced. She has 20 years of wisdom and it shows. After one session I understood something about myself I had avoided for a decade.',
+    author: 'Johannes W.',
+    location: 'Linz, Austria',
+    rating: 5,
+  },
+  {
+    id: 3,
+    quote:
+      'The 10-day darkness retreat changed the course of my life. When you remove all external light, you are forced to meet yourself completely. Dark Yoga gave me the tools to do that safely.',
+    author: 'Elena F.',
+    location: 'Munich, Germany',
+    rating: 5,
+  },
+  {
+    id: 4,
+    quote:
+      'I attended the Hanuman Chalisa ceremony skeptically. I left in tears — healed. The vibration in that dark room is something I cannot explain, only feel.',
+    author: 'David R.',
+    location: 'Vienna, Austria',
+    rating: 5,
+  },
+  {
+    id: 5,
+    quote:
+      '"Through Darkness into Light" — the lecture by Suyin and Saskia was the most moving thing I have attended in years. Two women sharing extraordinary courage.',
+    author: 'Claudia M.',
+    location: 'Salzburg, Austria',
+    rating: 5,
+  },
+  {
+    id: 6,
+    quote:
+      'The Waldviertel retreat space is extraordinary. The pyramid structure, the total silence, the darkness — Suyin has created something truly sacred here.',
+    author: 'Thomas B.',
+    location: 'Graz, Austria',
+    rating: 5,
+  },
+]
+
+export const SCHEDULE = [
+  {
+    id: 1,
+    className: 'Silent Dark Meditation',
+    day: 'Monday',
+    time: '18:00',
+    instructor: 'Suyin Orlowski',
+    spotsLeft: 5,
+    duration: 90,
+    level: 'All Levels',
+  },
+  {
+    id: 2,
+    className: 'Dark Yin & Breathwork',
+    day: 'Tuesday',
+    time: '17:30',
+    instructor: 'Suyin Orlowski',
+    spotsLeft: 4,
+    duration: 90,
+    level: 'All Levels',
+  },
+  {
+    id: 3,
+    className: 'Hanuman Chalisa Ceremony',
+    day: 'Wednesday',
+    time: '19:00',
+    instructor: 'Suyin Orlowski',
+    spotsLeft: 8,
+    duration: 60,
+    level: 'All Levels',
+  },
+  {
+    id: 4,
+    className: 'Soul Training Session',
+    day: 'Thursday',
+    time: '10:00',
+    instructor: 'Suyin Orlowski',
+    spotsLeft: 2,
+    duration: 75,
+    level: 'Private',
+  },
+  {
+    id: 5,
+    className: 'Soul Training Session',
+    day: 'Thursday',
+    time: '14:00',
+    instructor: 'Suyin Orlowski',
+    spotsLeft: 1,
+    duration: 75,
+    level: 'Private',
+  },
+  {
+    id: 6,
+    className: 'Silent Dark Meditation',
+    day: 'Friday',
+    time: '18:30',
+    instructor: 'Suyin Orlowski',
+    spotsLeft: 3,
+    duration: 90,
+    level: 'All Levels',
+  },
+  {
+    id: 7,
+    className: 'Dark Yin & Breathwork',
+    day: 'Saturday',
+    time: '09:00',
+    instructor: 'Suyin Orlowski',
+    spotsLeft: 6,
+    duration: 90,
+    level: 'All Levels',
+  },
+  {
+    id: 8,
+    className: 'Hanuman Chalisa Ceremony',
+    day: 'Saturday',
+    time: '11:30',
+    instructor: 'Suyin Orlowski',
+    spotsLeft: 7,
+    duration: 60,
+    level: 'All Levels',
+  },
+  {
+    id: 9,
+    className: 'Dark Yoga Retreat',
+    day: 'Sunday',
+    time: 'By Arrangement',
+    instructor: 'Suyin Orlowski',
+    spotsLeft: 3,
+    duration: 'Multi-day',
+    level: 'All Levels',
+  },
+]
+
+export const NAVIGATION = [
+  { label: 'Home', path: '/' },
+  { label: 'Classes', path: '/classes' },
+  { label: 'About', path: '/about' },
+  { label: 'Schedule', path: '/schedule' },
+  { label: 'Contact', path: '/contact' },
+]
+
+export const STUDIO_INFO = {
+  name: 'Dark Yoga®',
+  tagline: 'Der Weg ins Licht führt durch die Dunkelheit.',
+  taglineEN: 'The way to the light leads through the darkness.',
+  subTagline: 'Silent Retreat — Journey in darkness to your light.',
+  description:
+    'Dark Yoga® is the royal path of meditation. Founded by Suyin Orlowski in the mystical Waldviertel of Austria, Dark Yoga offers an extraordinary journey inward through the transformative power of complete darkness, silence, and ancient spiritual practice.',
+  email: 'info@darkyoga.at',
+  website: 'www.darkyoga.at',
+  location: 'Waldviertel, Austria',
+  facebook: 'https://www.facebook.com/darkyoga/',
+  philosophy: [
+    {
+      number: '01',
+      title: 'DUNKELHEIT',
+      titleEN: 'DARKNESS',
+      description:
+        'For thousands of years, darkness has been a framework for spiritual insights in all religions. It protects and nurtures what is unborn, waiting patiently for it to emerge into the visible.',
+    },
+    {
+      number: '02',
+      title: 'STILLE',
+      titleEN: 'SILENCE',
+      description:
+        'The true teacher is not Suyin — it is the darkness and the silence within yourself. When you sit with yourself completely, the soul begins to speak.',
+    },
+    {
+      number: '03',
+      title: 'LICHT',
+      titleEN: 'LIGHT',
+      description:
+        'When the mind is in harmony with the body and allowed to develop its full diversity, the soul opens to the light. This is the destination of every Dark Yoga journey.',
+    },
+  ],
+}
